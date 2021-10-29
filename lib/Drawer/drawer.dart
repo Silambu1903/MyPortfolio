@@ -75,18 +75,17 @@ class _DrawLayoutState extends State<DrawLayout> {
                           const Spacer(),
                           IconButton(
                             onPressed: () {},
+                            icon: SvgPicture.asset(
+                              'assets/instagram.svg',
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
                             icon: SvgPicture.asset('assets/github.svg'),
                           ),
                           IconButton(
                             onPressed: () {},
                             icon: SvgPicture.asset('assets/linkedin.svg'),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset(
-                              'assets/instagram.svg',
-                              color: Color(0xFF8c8c8e),
-                            ),
                           ),
                           IconButton(
                             onPressed: () {},
