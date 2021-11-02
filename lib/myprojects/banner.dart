@@ -15,50 +15,91 @@ class HomeBanner extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          /* Image.asset(
-            "assets/images/bg.jpeg",
-            fit: BoxFit.cover,
-          ),*/
+          Container(
+            alignment: Alignment.centerRight,
+            width: MediaQuery.of(context).size.width * 0.3,
+            height: MediaQuery.of(context).size.height * 0.05,
+            child: Image.asset(
+              "assets/banner.png",
+            ),
+          ),
           Container(color: darkColor.withOpacity(0.66)),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+            padding: const EdgeInsets.fromLTRB(30, 0, 0, 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Text(
-                  "",
-                  style: Responsive.isDesktop(context)
-                      ? Theme.of(context).textTheme.headline3!.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          )
-                      : Theme.of(context).textTheme.headline5!.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Text(
+                    "Hy! I Am\nSILAMBARASAN",
+                    style: Responsive.isDesktop(context)
+                        ? Theme.of(context).textTheme.headline3!.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            )
+                        : Theme.of(context).textTheme.headline5!.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Expanded(
+                    child: Text(
+                      "An Professional experienced Engineer and strong analytic \n"
+                      "thinker with exceptional skill in functioning professional work environment."
+                      "\nRecognized consistently for performance excellence and contributions to success Industry.",
+                      style: Responsive.isDesktop(context)
+                          ? Theme.of(context)
+                              .textTheme
+                              .bodyText2!
+                              .copyWith(color: bodyTextColor, fontSize: 12)
+                          : Theme.of(context).textTheme.bodyText2!.copyWith(
+                              color: bodyTextColor,
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ),
                 if (Responsive.isMobileLarge(context))
-                  const SizedBox(height: defaultPadding / 2),
-                /*   MyBuildAnimatedText(),
-                SizedBox(height: defaultPadding),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.2,
+                    height: 30,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: defaultPadding * 2,
+                            vertical: defaultPadding),
+                        backgroundColor: primaryColor,
+                      ),
+                      child: const Text(
+                        "EXPLORE NOW",
+                        style: TextStyle(color: darkColor, fontSize: 10),
+                      ),
+                    ),
+                  ),
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                           horizontal: defaultPadding * 2,
                           vertical: defaultPadding),
                       backgroundColor: primaryColor,
                     ),
-                    child: Text(
+                    child: const Text(
                       "EXPLORE NOW",
-                      style: TextStyle(color: darkColor),
+                      style: TextStyle(
+                          color: darkColor, fontWeight: FontWeight.bold),
                     ),
-                  ),*/
+                  ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

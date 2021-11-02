@@ -40,7 +40,7 @@ class ProgressBarSkill extends StatelessWidget {
             Expanded(
               child: AnimationProgress(
                 perctange: 0.7,
-                label: 'Android',
+                label: 'XD',
               ),
             ),
           ],

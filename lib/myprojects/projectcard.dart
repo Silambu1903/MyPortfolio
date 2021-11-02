@@ -16,7 +16,7 @@ class ProjectCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.fromLTRB(2, 0, 0, 0),
       child: Card(
-        elevation: 30,
+        elevation: 40,
         shadowColor: secondaryColor,
         child: Container(
           padding: const EdgeInsets.all(defaultPadding),
@@ -30,12 +30,38 @@ class ProjectCard extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.subtitle2,
               ),
-              Text(
-                project.description!,
-                maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(height: 1.5),
+              const SizedBox(
+                height: 20,
               ),
+              Tooltip(
+                message: project.description!,
+                child: Text(
+                  project.description!,
+                  maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(height: 1.5),
+                ),
+              ),
+              const Spacer(),
+              /*  Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        project.client!,
+                        maxLines: 2,
+                        style: TextStyle(
+                            color: Colors.lightBlueAccent,
+                            fontSize:
+                                Responsive.isMobileLarge(context) ? 3 : 4),
+                      ),
+                    ),
+                  ),
+                ],
+              ),*/
             ],
           ),
         ),

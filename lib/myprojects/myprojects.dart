@@ -38,7 +38,7 @@ class GridViewCard extends StatelessWidget {
   const GridViewCard({
     Key? key,
     this.crossAxisCount = 3,
-    this.childAspectRatio = 1.3,
+    this.childAspectRatio = 1.4,
   }) : super(key: key);
 
   final int crossAxisCount;

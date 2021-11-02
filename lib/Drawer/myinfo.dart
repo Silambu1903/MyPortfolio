@@ -32,7 +32,7 @@ class _MyInfoState extends State<MyInfo> {
               style: Theme.of(context).textTheme.subtitle1,
             ),
             const Text(
-              'Mobile App Developer',
+              'Software Developer',
               style: TextStyle(fontWeight: FontWeight.w200, height: 1.5),
             ),
             const Spacer(
