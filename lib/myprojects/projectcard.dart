@@ -37,7 +37,7 @@ class ProjectCard extends StatelessWidget {
                 message: project.description!,
                 child: Text(
                   project.description!,
-                  maxLines: Responsive.isMobileLarge(context) ? 3 : 4,
+                  maxLines: Responsive.isMobileLarge(context) ? 3 : 10,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(height: 1.5),
                 ),

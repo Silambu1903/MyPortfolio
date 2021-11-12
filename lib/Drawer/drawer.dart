@@ -27,6 +27,15 @@ class _DrawLayoutState extends State<DrawLayout> {
               child: Column(
                 children: [
                   MyAreaInFo(
+                    title: 'Education',
+                    text: 'B.E(Mech)',
+                  ),
+                  MyAreaInFo(
+                    title: 'Year',
+                    text: '2020',
+                  ),
+                  const Divider(),
+                  MyAreaInFo(
                     title: 'Residence',
                     text: 'TamilNadu',
                   ),

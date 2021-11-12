@@ -23,8 +23,8 @@ class _MyInfoState extends State<MyInfo> {
             CircleAvatar(
               radius: 50,
               child: ClipRRect(
-                  //  child: Image.asset('assets/myProfile.png'),
-                  ),
+                child: Image.asset('assets/myProfile.png'),
+              ),
             ),
             const Spacer(),
             Text(

@@ -25,13 +25,13 @@ class HomeBanner extends StatelessWidget {
           ),
           Container(color: darkColor.withOpacity(0.66)),
           Padding(
-            padding: const EdgeInsets.fromLTRB(30, 0, 0, 10),
+            padding: const EdgeInsets.fromLTRB(30, 0, 0, 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
+                  padding: const EdgeInsets.only(bottom: 5),
                   child: Text(
                     "Hy! I Am\nSILAMBARASAN",
                     style: Responsive.isDesktop(context)
@@ -45,56 +45,52 @@ class HomeBanner extends StatelessWidget {
                             ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: Expanded(
+                if (Responsive.isDesktop(context))
+                  Expanded(
                     child: Text(
-                      "An Professional experienced Engineer and strong analytic \n"
-                      "thinker with exceptional skill in functioning professional work environment."
-                      "\nRecognized consistently for performance excellence and contributions to success Industry.",
-                      style: Responsive.isDesktop(context)
-                          ? Theme.of(context)
-                              .textTheme
-                              .bodyText2!
-                              .copyWith(color: bodyTextColor, fontSize: 12)
-                          : Theme.of(context).textTheme.bodyText2!.copyWith(
-                              color: bodyTextColor,
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold),
-                    ),
+                        "An Professional experienced Engineer and strong analytic \n"
+                        "thinker with exceptional skill in functioning professional work environment."
+                        "\nRecognized consistently for performance excellence and contributions to success Industry.",
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText1!
+                            .copyWith(color: bodyTextColor, fontSize: 10)),
                   ),
-                ),
                 if (Responsive.isMobileLarge(context))
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.2,
-                    height: 30,
                     child: ElevatedButton(
                       onPressed: () {},
                       style: TextButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: defaultPadding * 2,
-                            vertical: defaultPadding),
                         backgroundColor: primaryColor,
                       ),
                       child: const Text(
-                        "EXPLORE NOW",
-                        style: TextStyle(color: darkColor, fontSize: 10),
+                        'Explore Now',
+                        style: TextStyle(
+                            color: darkColor,
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
                 if (!Responsive.isMobileLarge(context))
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: defaultPadding * 2,
-                          vertical: defaultPadding),
-                      backgroundColor: primaryColor,
-                    ),
-                    child: const Text(
-                      "EXPLORE NOW",
-                      style: TextStyle(
-                          color: darkColor, fontWeight: FontWeight.bold),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    height: MediaQuery.of(context).size.height * 0.08,
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 5),
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: TextButton.styleFrom(
+                          backgroundColor: primaryColor,
+                        ),
+                        child: const Text(
+                          'Explore Now',
+                          style: TextStyle(
+                              color: darkColor,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
                     ),
                   ),
               ],
