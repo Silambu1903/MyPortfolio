@@ -74,10 +74,11 @@ class AnimationProgress extends StatelessWidget {
                   backgroundColor: darkColor,
                 ),
                 Center(
-                    child: Text(
-                  (value * 100).toInt().toString() + "%",
-                  style: Theme.of(context).textTheme.subtitle1,
-                ))
+                  child: Text(
+                    (value * 100).toInt().toString() + "%",
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
+                ),
               ],
             ),
           ),

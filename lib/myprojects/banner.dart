@@ -46,15 +46,18 @@ class HomeBanner extends StatelessWidget {
                   ),
                 ),
                 if (Responsive.isDesktop(context))
-                  Expanded(
+                  Container(
+                    alignment: Alignment.bottomLeft,
+                    margin: EdgeInsets.only(bottom: 15),
                     child: Text(
-                        "An Professional experienced Engineer and strong analytic \n"
-                        "thinker with exceptional skill in functioning professional work environment."
-                        "\nRecognized consistently for performance excellence and contributions to success Industry.",
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText1!
-                            .copyWith(color: bodyTextColor, fontSize: 10)),
+                      "An Professional experienced Engineer and strong analytic \n"
+                      "thinker with exceptional skill in functioning professional work environment."
+                      "\nRecognized consistently for performance excellence and contributions to success Industry.",
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyText1!
+                          .copyWith(color: bodyTextColor, fontSize: 11),
+                    ),
                   ),
                 if (Responsive.isMobileLarge(context))
                   Container(
@@ -63,27 +66,28 @@ class HomeBanner extends StatelessWidget {
                       style: TextButton.styleFrom(
                         backgroundColor: primaryColor,
                       ),
-                      child: const Text(
-                        'Explore Now',
-                        style: TextStyle(
-                            color: darkColor,
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'Explore Now',
+                          style: TextStyle(
+                              color: darkColor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                   ),
                 if (!Responsive.isMobileLarge(context))
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    height: MediaQuery.of(context).size.height * 0.08,
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 5),
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: TextButton.styleFrom(
-                          backgroundColor: primaryColor,
-                        ),
-                        child: const Text(
+                  SizedBox(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: TextButton.styleFrom(
+                        backgroundColor: primaryColor,
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text(
                           'Explore Now',
                           style: TextStyle(
                               color: darkColor,
